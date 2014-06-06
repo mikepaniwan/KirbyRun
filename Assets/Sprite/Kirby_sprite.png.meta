@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: e40e0c57ed2fe4604a8f4d288281a1f4
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: Kirby_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 274
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 275
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 274
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 274
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 274
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 273
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 484
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 485
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 452
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 453
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 453
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 453
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 453
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 453
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 453
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Kirby_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 453
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
