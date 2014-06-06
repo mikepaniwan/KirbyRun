@@ -4,6 +4,8 @@ var prefab : Transform;
 var prefab2 : Transform;
 var prefab3 : Transform;
 var prefab4 : Transform;
+var prefab5 : Transform;
+
 var bcamera : Camera;
 
 
@@ -23,7 +25,7 @@ function Gen(){
 	//camera.transform.position.x;
 	var px = bcamera.transform.position.x;
 	//Debug.Log()
-	var y = Random.Range(0,3);
+	var y = Random.Range(0,4);
 	if(y == 0){
 		Instantiate (prefab, Vector3(px + 10f, -6.417644f, 0), Quaternion.identity);
 	}
@@ -34,6 +36,8 @@ function Gen(){
 	//1.5 - -2.2
 		var enemyY = Random.Range(-2.2f,1.5f);
 		Instantiate (prefab3, Vector3(px + 10f, enemyY, 0), Quaternion.identity);
+	}else if(y == 3) {
+		Instantiate (prefab5, Vector3(px + 10f, -2.527141, 0), Quaternion.identity);
 	}
 }
 	

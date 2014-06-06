@@ -51,11 +51,13 @@ function Reset()
 }
 
 function OnTriggerEnter2D(coll: Collider2D) {
-	if (coll.gameObject.tag == "Coin")
-	{
+	if (coll.gameObject.tag == "Coin"){
 		Destroy(coll.gameObject);
-		BG.gameObject.SendMessage("AddScore");
+	 	BG.gameObject.SendMessage("AddScore");
 	}else if(coll.gameObject.name == "EndGround") {
 		BG.gameObject.SendMessage("EndGame");
+	}
+	else if(coll.gameObject.tag == "SlideNext") {
+		rigidbody2D.velocity.x = 10f;
 	}
 }
