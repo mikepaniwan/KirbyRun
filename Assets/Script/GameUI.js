@@ -15,3 +15,8 @@ function OnGUI() {
 function AddScore() {
 	scoreGame += 300;
 }
+
+function EndGame() {
+	PlayerPrefs.SetInt("PlayerScore",scoreGame);
+	Application.LoadLevel("EndGame");
+}

@@ -51,10 +51,11 @@ function Reset()
 }
 
 function OnTriggerEnter2D(coll: Collider2D) {
-//Debug.Log
 	if (coll.gameObject.tag == "Coin")
 	{
 		Destroy(coll.gameObject);
 		BG.gameObject.SendMessage("AddScore");
+	}else if(coll.gameObject.name == "EndGround") {
+		BG.gameObject.SendMessage("EndGame");
 	}
 }
