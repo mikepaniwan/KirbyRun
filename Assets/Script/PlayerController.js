@@ -5,6 +5,7 @@ var animator : Animator;
 var prefabBullet : Transform;
 var spawned : boolean = false;
 var decay : float;
+var BG : GameObject;
 
 function Start() {
 	ice = this.collider2D;
@@ -47,4 +48,13 @@ function Reset()
        decay = 0;
        spawned = false;
     }
+}
+
+function OnTriggerEnter2D(coll: Collider2D) {
+//Debug.Log
+	if (coll.gameObject.tag == "Coin")
+	{
+		Destroy(coll.gameObject);
+		BG.gameObject.SendMessage("AddScore");
+	}
 }

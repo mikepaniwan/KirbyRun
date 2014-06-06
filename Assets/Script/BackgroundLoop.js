@@ -6,5 +6,5 @@ function OnTriggerEnter2D (collider : Collider2D) {
 		Destroy(collider.gameObject);
 	}
 	var boxMap : BoxCollider2D = collider;
-	collider.transform.position.x += 6 * (boxMap.size.x-0.7f);
+	collider.transform.position.x += 6 * (boxMap.size.x-0.6f);
 }

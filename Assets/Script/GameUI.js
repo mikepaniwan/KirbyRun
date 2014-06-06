@@ -11,3 +11,7 @@ function OnGUI() {
 	GUI.skin = iceStyle;
 	GUI.Label(new Rect(0,0,200,100),"Score: " + scoreGame);
 }
+
+function AddScore() {
+	scoreGame += 300;
+}
