@@ -1,9 +1,8 @@
 ﻿#pragma strict
 
-var x = 0;
-var y = 0;
 var prefab : Transform;
 var prefab2 : Transform;
+var prefab3 : Transform;
 var bcamera : Camera;
 
 function Start(){
@@ -16,16 +15,22 @@ function Update () {
 
 function Gen(){
 	Debug.Log("Hi");
-	x = Random.Range(0,3);
+	var x = Random.Range(0.1f,2f);
 	WaitForSeconds(x);
 	//camera.transform.position.x;
 	var px = bcamera.transform.position.x;
 	//Debug.Log()
-	y = Random.Range(0,2);
+	var y = Random.Range(0,3);
 	if(y == 0)
 		Instantiate (prefab, Vector3(px + 10f, -6.417644f, 0), Quaternion.identity);
 	else if( y == 1 ){
-		Instantiate (prefab2, Vector3(px + 10f, 2.125208, 0), Quaternion.identity);
+		Instantiate (prefab2, Vector3(px + 10f, 3.125208, 0), Quaternion.identity);
 	}
+	else if( y == 2 ){
+	//1.5 - -2.2
+		var enemyY = Random.Range(-2.2f,1.5f);
+		Instantiate (prefab3, Vector3(px + 10f, enemyY, 0), Quaternion.identity);
+	}
+	
 	
 }
