@@ -4,13 +4,24 @@ var hp = 3;
 var BG : GameObject;
 var Explosion : Transform;
 var audioExplosion : AudioSource;
+var turn : boolean = false;
 
 function Start() {
 	
 }
 
 function Update () {
-
+	if(Input.GetMouseButtonDown(0))
+    {
+        turn = true;
+    }
+ 
+    if(Input.GetMouseButtonUp(0))
+    {
+        turn = false;
+    }
+ 
+  
 }
 
 function Fired() {

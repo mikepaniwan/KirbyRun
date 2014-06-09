@@ -16,27 +16,13 @@ function Update () {
 	Reset();
 	if(rigidbody2D.velocity.y == 0){
 		
-		/*
-		
-		// use count
 		if(Input.touchCount > 0) {
 			for(var i = 0 ; i < Input.touchCount ; i++) {
-				Debug.Log("delta: " + Input.GetTouch(i).deltaPosition.y);
-				if(Input.GetTouch(i).phase == TouchPhase.Began) {
-					if(Input.GetTouch(i).deltaPosition.y <= 0) {
-						Slide();
-					}else {
-						Jumping();
-					}
-				}else if(Input.GetTouch(i).phase == TouchPhase.Moved) {
-					if(Input.GetTouch(i).deltaPosition.y >= 0) {
-						Shooting();
-					}
+				if(Input.GetTouch(i).phase == TouchPhase.Began && !GameUI.turn) {
+					Shooting();
 				}
 			}
 		}
-		*/
-		
 		
 		if(Input.GetKey(KeyCode.UpArrow)) {
 			Jumping();
