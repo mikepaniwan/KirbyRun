@@ -6,34 +6,52 @@ var prefabBullet : Transform;
 var spawned : boolean = false;
 var decay : float;
 var BG : GameObject;
+var audioCoin : AudioSource;
 
 function Start() {
-	ice = this.collider2D;
 	animator = this.GetComponent(Animator);
 }
 
 function Update () {
 	Reset();
 	if(rigidbody2D.velocity.y == 0){
+		
+		/*
+		
+		// use count
+		if(Input.touchCount > 0) {
+			for(var i = 0 ; i < Input.touchCount ; i++) {
+				Debug.Log("delta: " + Input.GetTouch(i).deltaPosition.y);
+				if(Input.GetTouch(i).phase == TouchPhase.Began) {
+					if(Input.GetTouch(i).deltaPosition.y <= 0) {
+						Slide();
+					}else {
+						Jumping();
+					}
+				}else if(Input.GetTouch(i).phase == TouchPhase.Moved) {
+					if(Input.GetTouch(i).deltaPosition.y >= 0) {
+						Shooting();
+					}
+				}
+			}
+		}
+		*/
+		
+		
 		if(Input.GetKey(KeyCode.UpArrow)) {
-			animator.SetInteger("Activity",2);
-			rigidbody2D.velocity.y = 20f; 
+			Jumping();
 		}
 		else if(Input.GetKey(KeyCode.DownArrow)) {
-			Debug.Log(transform.localScale.y);
-			animator.SetInteger("Activity",1);
-			ice.radius = 0.3;
+			Slider();
 		}
 		else  {
 			animator.SetInteger("Activity",0);
 			ice.radius = 0.65; 
 		}
 	}
+	
 	if(Input.GetKey(KeyCode.Space) && !spawned) {
-			decay = 1f;
-    		spawned = true;
-			Instantiate (prefabBullet, Vector3(transform.position.x+1.0f, transform.position.y, 0), Quaternion.identity);
-			animator.SetInteger("Activity",3);
+		Shooting();		
 	}
 }
 
@@ -52,6 +70,8 @@ function Reset()
 
 function OnTriggerEnter2D(coll: Collider2D) {
 	if (coll.gameObject.tag == "Coin"){
+		// run audio coin
+		audioCoin.Play();
 		Destroy(coll.gameObject);
 	 	BG.gameObject.SendMessage("AddScore");
 	}else if(coll.gameObject.name == "EndGround") {
@@ -60,4 +80,22 @@ function OnTriggerEnter2D(coll: Collider2D) {
 	else if(coll.gameObject.tag == "SlideNext") {
 		rigidbody2D.velocity.x = 10f;
 	}
+}
+
+function Jumping() {
+	animator.SetInteger("Activity",2);
+	rigidbody2D.velocity.y = 20f; 
+}
+
+function Slider() {
+	animator.SetInteger("Activity",1);
+	ice.radius = 0.3;
+	Debug.Log(ice.radius + "");
+}
+
+function Shooting() {
+	decay = 1f;
+    spawned = true;
+	Instantiate (prefabBullet, Vector3(transform.position.x+1.0f, transform.position.y, 0), Quaternion.identity);
+	animator.SetInteger("Activity",3);
 }
